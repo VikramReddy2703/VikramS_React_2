@@ -1,0 +1,152 @@
+.calculator {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 300px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    max-width: 300px;
+    max-width: 100%;
+    margin: 20px auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  .calculator.dark {
+    background-color: #343434;
+    color: #f1f1f7;
+  }
+  .theme-toggle {
+    text-align: right;
+    margin-bottom: 10px;
+    grid-row: 0;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .history {
+    margin-bottom: 10px;
+    grid-row: 1;
+  }
+  .display {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+    grid-column: 1 / span 2;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr); /* Updated */
+    gap: 8px;
+    max-width: 100%;
+    grid-row: 3;
+  }  
+  .buttons .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttons button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+  }
+  .buttons button.clear {
+    background-color: #ff4c4c;
+    color: #fff;
+    flex: 1;
+  }
+  .buttons button:hover {
+    background-color: #eee;
+  }
+  .history ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  .history li {
+    margin-bottom: 4px;
+  }
+  body {
+    background: linear-gradient(135deg, skyblue, #29f6b5);
+  }
+  .calculator .theme-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  .slider.round {
+    border-radius: 20px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .theme-label {
+    margin-left: 10px;
+  }
